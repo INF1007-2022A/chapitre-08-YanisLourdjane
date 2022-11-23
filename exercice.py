@@ -42,6 +42,24 @@ def exercice3(note_path, result_file_path):
                 if value[0]<= int(ligne) < value[1]:
                     f2.write(f" {ligne} « {key} »")
 
+def exercice4(recipes_path):
+    pass
+
+def exercice5(file_path):
+    liste=[]
+    with open(file_path, "r", encoding='utf-8') as f1:
+        texte=f1.read().split()
+        for mot in texte:
+            if mot.isnumeric():
+                liste.append(mot)
+
+    return  sorted(liste)
+
+
+
+
+
+
 
 
 
@@ -54,4 +72,6 @@ if __name__ == '__main__':
     exercice1("exemple.txt","text.txt")
     exercice2("exemple.txt", "exemple_copy.txt")
     exercice3("notes.txt", "notes_letter.txt")
+    exercice4("recettes.p")
+    print(exercice5("exemple.txt"))
     pass
