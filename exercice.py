@@ -56,6 +56,18 @@ def exercice5(file_path):
     return  sorted(liste)
 
 
+def exercice6(file_path1, file_path2):
+    with open(file_path1, "r", encoding='utf-8') as f1, open(file_path2, "w", encoding='utf-8') as f2:
+        lignes=f1.readlines()
+        for index, value in enumerate(lignes):
+            if index%2==0:
+                f2.write(lignes[index])
+
+
+
+
+
+
 
 
 
@@ -74,4 +86,5 @@ if __name__ == '__main__':
     exercice3("notes.txt", "notes_letter.txt")
     exercice4("recettes.p")
     print(exercice5("exemple.txt"))
+    exercice6("notes.txt", "notes_skip.txt")
     pass
